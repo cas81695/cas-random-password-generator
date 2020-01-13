@@ -1,0 +1,19 @@
+.container {
+    background-color: gainsboro;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+}
+.content {
+    background-color: whitesmoke;
+}
+
+h4 {
+    text-align: left;
+    font-size: small;
+    padding: 15px;
+    border-bottom-color: gainsboro;
+    border-width: thin;
+
+}
