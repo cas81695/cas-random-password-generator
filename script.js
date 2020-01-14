@@ -11,7 +11,14 @@ var yourPassword = document.getElementById ("yourPassword")
 function answerUpper() {
     var upperYes = confirm("Would you like to inlcude upper case letters?")
     if (upperYes == true) { 
-        characters = characters + num
+        characters = characters + upper
+    }
+}
+
+function answerLower() {
+    var lowerSet = confirm("Would you like to include lower case letters?")
+    if (lowerSet == true) {
+        characters = characters + lower 
     }
 }
 
@@ -20,11 +27,11 @@ function answerUpper() {
 function answerSpecial() {
     var specialYes = confirm("Would you like to include special characters?")
     if (specialYes == true) {
-        characters - characters + special
+        characters = characters + special
     }
 }
 
-function answerUpper() {
+function answer() {
 
 }
 
