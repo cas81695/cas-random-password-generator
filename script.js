@@ -4,9 +4,9 @@ var num = "0123456789";
 var lower = "abcdefghijklmnopqurstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var charNum = document.getElementById("charNum")
-var submit = document.getElementById("submit")
-var yourPw = document.getElementById ("yourPw")
+var charNum = document.getElementById("charNum");
+var submit = document.getElementById("submit");
+var yourPw = document.getElementById ("yourPw");
 
 var characters = "";
 
@@ -60,6 +60,6 @@ function clickCopy() {
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Copied the Password" + copyText.value);
+    alert("Copied the Password:" + copyText.value);
 
 }
