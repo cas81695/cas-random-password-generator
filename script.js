@@ -1,8 +1,8 @@
 
 var special = "!@#$%^&*()-_=+/";
 var numeric = "0123456789";
-var lower = "abcdefghijklmnopqurstuvwxyz"
-var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lower = "abcdefghijklmnopqurstuvwxyz";
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 var charNum = document.getElementById("charNum")
 var submit = document.getElementById("submit")
@@ -39,39 +39,11 @@ function answerSpecial() {
     }
 }
 
-function answer() {
-
+function clickSubmit() {
+    yourPassword.value = Password(charNum.value, characters);
 }
 
-    let passwordResult = ""
-    let charsConfirmed = "";
 
-    if (userSize < 8 || userSize > 128 || isNaN(userSize)) {
-        alert("You must enter a valid number");
-        return;
-
-    }
-    if (specialOption) {
-        charsConfirmed += specialSet;
-    }
-
-    if (numericOption) {
-        charsConfirmed += numericSet;
-    }
-
-    if (lowerOption) {
-        charsConfirmed += numericSet;
-    }
-    if (upperOption) {
-        charsConfirmed += numericSet;
-    }
-
-    else {
-        if(charsConfirmed < 1) {
-            alert("You must choose at least one option of character");
-        }
-        }
-        passwordLenght = charsConfirmed.length;
 
         function randomize(length) {
             for (let i = 0; i <= length; i++) {
