@@ -4,6 +4,11 @@ var numericSet = "0123456789";
 var lowerSet = "abcdefghijklmnopqurstuvwxyz"
 var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+var charNum = document.getElementById("charNum")
+var submit = document.getElementById("submit")
+var yourPassword = document.getElementById ("yourPassword")
+
+
 
 function generate () {
     let userInput = prompt("Please enter in a number that is between 8 and 128 for the length");
