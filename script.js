@@ -8,11 +8,24 @@ var charNum = document.getElementById("charNum")
 var submit = document.getElementById("submit")
 var yourPassword = document.getElementById ("yourPassword")
 
+function answerUpper() {
+    var upperYes = confirm("Would you like to inlcude upper case letters?")
+    if (upperYes == true) { 
+        characters = characters + num
+    }
+}
+
+}
+
 function answerSpecial() {
     var specialYes = confirm("Would you like to include special characters?")
-    if (specialYes === true) {
+    if (specialYes == true) {
         characters - characters + special
     }
+}
+
+function answerUpper() {
+
 }
 
     let passwordResult = ""
