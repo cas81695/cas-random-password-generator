@@ -15,8 +15,6 @@ function answerNumeric() {
     }
 }
 
-}
-
 function answerUpper() {
     var upperYes = confirm("Would you like to inlcude upper case letters?")
     if (upperYes == true) { 
@@ -49,20 +47,6 @@ function password(length, characters) {
         password = password + characters.charAt(Math.floor(Math.random() * characters.length));
     }
 }
-
-
-
-
-        function randomize(length) {
-            for (let i = 0; i <= length; i++) {
-                passwordResult += charsConfirmed.charAt(
-                    Math.floor(Math.random() * passwordLength)
-                );
-            }
-            return passwordResult;
-        }
-        document.getElementById("password").innerHTML = randomize(userSize -1)
-    }
 
     
 

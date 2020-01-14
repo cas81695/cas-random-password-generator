@@ -22,11 +22,14 @@
                         <div class="content">
                             <h4>Generate a Password</h4>
                             <br />
-                            <input type="text" id="display">
+                            <input type="number" id="charNum"
+                            min="8" max="128" />
                             <br />
-                            <br />
-                            <button onclick="generate">Generate Password</button>
-                            <button onclick="copy">Copy to Clipboard</button>
+                            <input type=Button value="Generate Password" name="submit">Generate Password</button><br /> -->
+                            New Password: <input type="text" id="yourPassword" size="80"/>
+
+                            <button onclick="clickCopy()"Copy to Clipboard</button>
+                                
                         </div>
                     </div>
                  </div>
