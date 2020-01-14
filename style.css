@@ -16,5 +16,11 @@ h4 {
     padding: 15px;
     border-bottom-color: gainsboro;
     border-width: thin;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+.BUTTON {
+    color: orange;
+    
 }

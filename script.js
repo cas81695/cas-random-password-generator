@@ -11,7 +11,7 @@ var yourPw = document.getElementById ("yourPw");
 var characters = "";
 
 function answerNum() {
-    var numYes = confirm("Would you like to include numbers?");
+    var numYes = confirm("Would you like to have numbers in your password?");
     if (numYes == true) {
         characters = characters + num;
     }
@@ -20,7 +20,7 @@ function answerNum() {
 answerNum();
 
 function answerUpper() {
-    var upperYes = confirm("Would you like to inlcude upper case letters?");
+    var upperYes = confirm("Would you like to have upper case letters in your password?");
     if (upperYes == true) { 
         characters = characters + upper;
     }
@@ -29,7 +29,7 @@ function answerUpper() {
 answerUpper ();
 
 function answerLower() {
-    var lowerYes = confirm("Would you like to include lower case letters?");
+    var lowerYes = confirm("Would you like to have lower case letters in your password?");
     if (lowerYes == true) {
         characters = characters + lower; 
     }
@@ -39,11 +39,12 @@ answerLower ();
 
 
 function answerSpecial() {
-    var specialYes = confirm("Would you like to include special characters?");
+    var specialYes = confirm("Would you like to have special characters in your password?");
     if (specialYes == true) {
         characters = characters + special;
     }
 }
+
 answerSpecial ();
 
 function clickSubmit() {
@@ -63,6 +64,6 @@ function clickCopy() {
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Copied the Password:" + copyText.value);
+    alert("Copied the Password: " + copyText.value);
 
 }
