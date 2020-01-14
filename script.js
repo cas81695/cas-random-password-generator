@@ -11,32 +11,35 @@ var yourPw = document.getElementById ("yourPw");
 var characters = "";
 
 function answerNum() {
-    var numYes = confirm("Would you like to include numbers?")
+    var numYes = confirm("Would you like to include numbers?");
     if (numYes == true) {
         characters = characters + num;
     }
 }
+
 answerNum();
 
 function answerUpper() {
-    var upperYes = confirm("Would you like to inlcude upper case letters?")
+    var upperYes = confirm("Would you like to inlcude upper case letters?");
     if (upperYes == true) { 
         characters = characters + upper;
     }
 }
+
 answerUpper ();
 
 function answerLower() {
-    var lowerYes = confirm("Would you like to include lower case letters?")
+    var lowerYes = confirm("Would you like to include lower case letters?");
     if (lowerYes == true) {
         characters = characters + lower; 
     }
 }
+
 answerLower ();
 
 
 function answerSpecial() {
-    var specialYes = confirm("Would you like to include special characters?")
+    var specialYes = confirm("Would you like to include special characters?");
     if (specialYes == true) {
         characters = characters + special;
     }
