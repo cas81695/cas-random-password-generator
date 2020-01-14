@@ -10,17 +10,12 @@
     background-color: whitesmoke;
 }
 
-h4 {
-    text-align: left;
+.h4 {
+    float: left;
     font-size: small;
     padding: 15px;
     border-bottom-color: gainsboro;
     border-width: thin;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
-}
-
-.BUTTON {
-    color: orange;
-    
 }
