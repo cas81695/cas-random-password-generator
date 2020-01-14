@@ -1,6 +1,6 @@
 
 var special = "!@#$%^&*()-_=+/";
-var numeric = "0123456789";
+var num = "0123456789";
 var lower = "abcdefghijklmnopqurstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -10,14 +10,14 @@ var yourPassword = document.getElementById ("yourPassword")
 
 var characters = "";
 
-function answerNumeric() {
-    var numericYes = confirm("Would you like to include numbers?")
-    if (numericYes == true) {
-        characters = characters + numeric;
+function answerNum() {
+    var numYes = confirm("Would you like to include numbers?")
+    if (numYes == true) {
+        characters = characters + num;
     }
 }
 
-answerNumeric();
+answerNum();
 
 function answerUpper() {
     var upperYes = confirm("Would you like to inlcude upper case letters?")
@@ -64,6 +64,6 @@ function clickCopy() {
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Copied the Password; " + copyText.value);
+    alert("Copied the Password" + copyText.value);
 
 }
