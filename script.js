@@ -6,7 +6,7 @@ var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 var charNum = document.getElementById("charNum")
 var submit = document.getElementById("submit")
-var yourPassword = document.getElementById ("yourPassword")
+var yourPw = document.getElementById ("yourPw")
 
 var characters = "";
 
@@ -52,15 +52,15 @@ function clickSubmit() {
 }
 
 function password(length, characters) {
-    var password = "";
+    var pwd = "";
     for(var i=0; i<length; i++) {
-        password = password + characters.charAt(Math.floor(Math.random() * characters.length));
+        pwd = pwd + characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    return password;
+    return pwd;
 }
 
 function clickCopy() {
-    var copyText = document.getElementById("yourPassword")
+    var copyText = document.getElementById("yourPw")
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
