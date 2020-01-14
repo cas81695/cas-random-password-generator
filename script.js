@@ -16,7 +16,6 @@ function answerNum() {
         characters = characters + num;
     }
 }
-
 answerNum();
 
 function answerUpper() {
@@ -25,16 +24,14 @@ function answerUpper() {
         characters = characters + upper;
     }
 }
-
 answerUpper ();
 
 function answerLower() {
-    var lowerSet = confirm("Would you like to include lower case letters?")
-    if (lowerSet == true) {
+    var lowerYes = confirm("Would you like to include lower case letters?")
+    if (lowerYes == true) {
         characters = characters + lower; 
     }
 }
-
 answerLower ();
 
 
@@ -44,11 +41,10 @@ function answerSpecial() {
         characters = characters + special;
     }
 }
-
 answerSpecial ();
 
 function clickSubmit() {
-    yourPassword.value = Password(charNum.value, characters);
+    yourPw.value = password(charNum.value, characters);
 }
 
 function password(length, characters) {
