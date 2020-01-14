@@ -43,6 +43,14 @@ function clickSubmit() {
     yourPassword.value = Password(charNum.value, characters);
 }
 
+function password(length, characters) {
+    var password = "";
+    for(var i=0; i<length; i++) {
+        password = password + characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+}
+
+
 
 
         function randomize(length) {
