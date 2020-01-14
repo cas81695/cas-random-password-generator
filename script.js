@@ -1,8 +1,8 @@
 
-const specialSet = "!@#$%^&*()-_=+/";
-const numericSet = "0123456789";
-const lowerSet = "abcdefghijklmnopqurstuvwxyz"
-const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var specialSet = "!@#$%^&*()-_=+/";
+var numericSet = "0123456789";
+var lowerSet = "abcdefghijklmnopqurstuvwxyz"
+var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 function generate () {
