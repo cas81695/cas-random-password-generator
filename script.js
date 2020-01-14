@@ -8,15 +8,12 @@ var charNum = document.getElementById("charNum")
 var submit = document.getElementById("submit")
 var yourPassword = document.getElementById ("yourPassword")
 
-
-
-function generate () {
-    let userInput = prompt("Please enter in a number that is between 8 and 128 for the length");
-    let userSize = parseInt(userInput)
-    let specialOption = confirm("Would you like your password to have special characters?");
-    let numericOption = confirm("Would you like your password to have numbers?");
-    let lowerOption = confirm("Would you like lower case letters in your password?");
-    let upperOption = confirm("Would you like upper case letters in your psassword?");
+function answerSpecial() {
+    var specialYes = confirm("Would you like to include special characters?")
+    if (specialYes === true) {
+        characters - characters + special
+    }
+}
 
     let passwordResult = ""
     let charsConfirmed = "";
