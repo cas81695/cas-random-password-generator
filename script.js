@@ -48,8 +48,11 @@ function password(length, characters) {
     }
 }
 
+function clickCopy() {
+    var copyText = document.getElementById("yourPassword")
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the Password; " + copyText.value);
     
-
-
-
 }
