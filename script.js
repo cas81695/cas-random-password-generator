@@ -1,28 +1,36 @@
 
-var specialSet = "!@#$%^&*()-_=+/";
-var numericSet = "0123456789";
-var lowerSet = "abcdefghijklmnopqurstuvwxyz"
-var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var special = "!@#$%^&*()-_=+/";
+var numeric = "0123456789";
+var lower = "abcdefghijklmnopqurstuvwxyz"
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 var charNum = document.getElementById("charNum")
 var submit = document.getElementById("submit")
 var yourPassword = document.getElementById ("yourPassword")
 
+function answerNumeric() {
+    var numericYes = confirm("Would you like to include numbers?")
+    if (numericYes == true) {
+        characters = characters + numeric;
+    }
+}
+
+}
+
 function answerUpper() {
     var upperYes = confirm("Would you like to inlcude upper case letters?")
     if (upperYes == true) { 
-        characters = characters + upper
+        characters = characters + upper;
     }
 }
 
 function answerLower() {
     var lowerSet = confirm("Would you like to include lower case letters?")
     if (lowerSet == true) {
-        characters = characters + lower 
+        characters = characters + lower; 
     }
 }
 
-}
 
 function answerSpecial() {
     var specialYes = confirm("Would you like to include special characters?")
