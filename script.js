@@ -10,13 +10,19 @@ var yourPassword = document.getElementById ("yourPassword");
 
 var submit = document.getElementById("submit");
 
-var charNumber = document.getElementById("charNumber");
-
-
 var characters = "";
+
+var length = "";
 
 
 // User inputs the options of including of numbers.
+
+function Length() {
+    var length = prompt("What length do you want your password to be?");
+    if (length != null && length != "") {
+        for(var i > 7; i < 129; i++)
+    }  
+}
 
 function answerNumbers() {
     var numbersYes = confirm("Would you like to have numbers in your password?");
@@ -29,8 +35,8 @@ function answerNumbers() {
 // User inputs the option of including upper case letters.
 
 function answerUpperCase() {
-    var upperYes = confirm("Would you like to have upper case letters in your password?");
-    if (upperYes == true) { 
+    var upperCaseYes = confirm("Would you like to have upper case letters in your password?");
+    if (upperCaseYes == true) { 
         characters = characters + upperCase;
     }
 }
@@ -39,8 +45,8 @@ function answerUpperCase() {
 // User inputs the option of including lower case letters.
 
 function answerLowerCase() {
-    var lowerYes = confirm("Would you like to have lower case letters in your password?");
-    if (lowerYes == true) {
+    var lowerCaseYes = confirm("Would you like to have lower case letters in your password?");
+    if (lowerCaseYes == true) {
         characters = characters + lowerCase; 
     }
 }
@@ -59,11 +65,12 @@ function answerSpecialCharacters() {
 
 function clickSubmit() {
 
-    answerNumbers();
+    answerLength ();
+    answerNumbers ();
     answerUpperCase ();
     answerLowerCase ();
     answerSpecialCharacters ();
-    yourPassword.value = password(charNumber.value, characters);
+    yourPassword.value = password(length.value, characters);
 
 }
 
