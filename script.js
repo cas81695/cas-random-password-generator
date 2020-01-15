@@ -12,23 +12,22 @@ var submit = document.getElementById("submit");
 
 var characters = "";
 
-var length = "";
+var charNumber = "";
 
 
 // User inputs the options of including of numbers.
 
-function answerLength () {
-    var length = parseInt(prompt("Enter the length of your password between 8 and 128?"));
-    if (length < 128) {
-        document.write("Your Length (" + length + ") matches the requirement","" );
-    } else if (isNaN(length)) {
-        parseInt(prompt("It is not a length. Please enter a lenght from 8 to 128", ""));
+function answerCharNumber () {
+    var number = parseInt(prompt("Enter the length of your password between 8 and 128?"));
+    if (number < 128) {
+    } else if (isNaN(number)) {
+        parseInt(prompt("It is not a length. Please enter a length from 8 to 128", ""));
     } else {
-        parseInt(prompt("Your Length (" + length + ") is above 128. Please enter a length between 8 and 128", ""));
-
+        parseInt(prompt("Your Length (" + number + ") is above 128. Please enter a length between 8 and 128", "")); {
+            charNumber = number;
+        }
     }
-
-    }
+}
 
 function answerNumbers() {
     var numbersYes = confirm("Would you like to have numbers in your password?");
@@ -71,12 +70,12 @@ function answerSpecialCharacters() {
 
 function clickSubmit() {
 
-    answerLength ();
+    answerCharNumber ();
     answerNumbers ();
     answerUpperCase ();
     answerLowerCase ();
     answerSpecialCharacters ();
-    yourPassword.value = password(length.value, characters);
+    yourPassword.value = password(charNumber.value, characters);
 
 }
 
@@ -84,7 +83,7 @@ function clickSubmit() {
 
 function password(length, characters) {
     var Password = "";
-    for(var i=0; i<Length; i++) {
+    for(var i=0; i<length; i++) {
         Password = Password + characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return Password;
