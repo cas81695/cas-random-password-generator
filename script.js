@@ -16,10 +16,11 @@ var characters = "";
 
 
 // User inputs the options of including of numbers.
-
-function answerCharacterNum() {
-    var characterNum = Number(prompt("Enter the length of your password between 8 and 128?"));
-    if (characterNum > 8 || characterNum < 128); 
+function answerCharacterNum () {
+    var plength = Number(prompt("Enter the length of your password between 8 and 128?"));
+    if (plength == plength > 8 || plength < 128); { 
+            characterNum = plength;  
+        }
     }
 
 function answerNumbers() {
@@ -69,7 +70,7 @@ function clickSubmit() {
     answerUpperCase ();
     answerLowerCase ();
     answerSpecial ();
-    yourPassword.value = password(characterNum.value, characters);
+    yourPassword.value = password(characterNum, characters);
    
 }
 
