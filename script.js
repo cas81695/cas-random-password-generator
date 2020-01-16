@@ -1,27 +1,36 @@
 
-// The variables of each function, the strings attached to each function and the objects used for the password
+// The list of arrays of possible characters for password
 
-var special = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+","/"];
-var numbers = ["0","1","2","3","4","5","6","7","8","9"];
-var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var special = ["!@#$%^&*()-_=+/"];
+var numbers = ["0123456789"];
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+// Refers to the text box that shows the gerneated password
 
 var yourPassword = document.getElementById ("yourPassword");
 
+// Refers to the botton that the user clicks to generates the password
+
 var submit = document.getElementById("clickSubmit");
 
-var characterNum = "";
+// The variable's values for the password are to be determiend in the functions
+
+var characterNumber = "";
 
 var characters = "";
 
 
-// User inputs the options of including of numbers.
-function answerCharacterNum () {
+// User inputs the desired length of password 
+
+function answerCharacterNumber () {
     var plength = Number(prompt("Enter the length of your password between 8 and 128?"));
     if (plength == plength > 8 || plength < 128); { 
-            characterNum = plength;  
+            characterNumber = plength;  
         }
     }
+
+// User has the option of including numbers in password
 
 function answerNumbers() {
     var numbersYes = confirm("Would you like to have numbers in your password?");
@@ -31,7 +40,7 @@ function answerNumbers() {
 }
 
 
-// User inputs the option of including upper case letters.
+// User has the option of including upper case letters in password
 
 function answerUpperCase() {
     var upperCaseYes = confirm("Would you like to have upper case letters in your password?");
@@ -41,7 +50,7 @@ function answerUpperCase() {
 }
 
 
-// User inputs the option of including lower case letters.
+// User has the option of including lower case letters in password
 
 function answerLowerCase() {
     var lowerCaseYes = confirm("Would you like to have lower case letters in your password?");
@@ -51,7 +60,7 @@ function answerLowerCase() {
 }
 
 
-// User inputs the option of including special characters.
+// User has the option of including special characters in password
 
 function answerSpecial() {
     var specialCharactersYes = confirm("Would you like to have special characters in your password?");
@@ -65,14 +74,16 @@ function answerSpecial() {
 
 function clickSubmit() {
 
-    answerCharacterNum ();
+    answerCharacterNumber ();
     answerNumbers ();
     answerUpperCase ();
     answerLowerCase ();
     answerSpecial ();
-    yourPassword.value = password(characterNum, characters);
+    yourPassword.value = password(characterNumber, characters);
    
 }
+
+// The loop takes the values determind from the previous 
 
 function password(length, characters) {
     var password = "";
@@ -83,7 +94,7 @@ function password(length, characters) {
 }
 
 
-// The user has the password copied onto clipboard
+// The user has the option to copy the password that was generated from the loop to clipbaord
 
 function clickCopy() {
     var copyText = document.getElementById("yourPassword")
