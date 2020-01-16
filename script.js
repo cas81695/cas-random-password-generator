@@ -1,10 +1,10 @@
 
 // The variables of each function, the strings attached to each function and the objects used for the password
 
-var specialCharacters = "!@#$%^&*()-_=+/";
-var numbers = "0123456789";
-var lowerCase = "abcdefghijklmnopqurstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var specialCharacters = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+","/"];
+var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 var yourPassword = document.getElementById ("yourPassword");
 
@@ -12,19 +12,19 @@ var submit = document.getElementById("submit");
 
 var characters = "";
 
-var charNumber = "";
+var Number = "";
 
 
 // User inputs the options of including of numbers.
 
-function answerCharNumber () {
+function answerNumber () {
     var number = parseInt(prompt("Enter the length of your password between 8 and 128?"));
     if (number < 128) {
     } else if (isNaN(number)) {
         parseInt(prompt("It is not a length. Please enter a length from 8 to 128", ""));
     } else {
         parseInt(prompt("Your Length (" + number + ") is above 128. Please enter a length between 8 and 128", "")); {
-            charNumber = number;
+            Number = number;
         }
     }
 }
@@ -70,12 +70,12 @@ function answerSpecialCharacters() {
 
 function clickSubmit() {
 
-    answerCharNumber ();
+    answerNumber ();
     answerNumbers ();
     answerUpperCase ();
     answerLowerCase ();
     answerSpecialCharacters ();
-    yourPassword.value = password(charNumber.value, characters);
+    yourPassword.value = password(number.value, characters);
 
 }
 
