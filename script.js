@@ -75,7 +75,7 @@ function clickSubmit() {
     answerUpperCase ();
     answerLowerCase ();
     answerSpecialCharacters ();
-    yourPassword.value = password(number.value, characters);
+    yourPassword.value = password(Number.value, characters);
 
 }
 
@@ -83,8 +83,8 @@ function clickSubmit() {
 
 function password(length, characters) {
     var Password = "";
-    for(var i=0; i<length; i++) {
-        Password = Password + characters.charAt(Math.floor(Math.random() * characters.length));
+    for(var i = 0; i < length; i++) {
+        Password += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return Password;
 }
