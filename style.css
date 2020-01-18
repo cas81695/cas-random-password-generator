@@ -10,12 +10,20 @@
     background-color: whitesmoke;
 }
 
-.h4 {
-    float: left;
-    font-size: small;
+h4 {
+    font-size: large;
     padding: 15px;
-    border-bottom-color: gainsboro;
-    border-width: thin;
+    border-bottom-width: thin;
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+input {
+    background-color: purple;
+    color: white;
+    border: black;
+    border-width: 5px;
+    border-radius: 20px;
+    margin: 5px;
 
 }
