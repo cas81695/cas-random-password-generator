@@ -25,7 +25,7 @@ var characters = "";
 
 function answerCharacterNumber () {
     var plength = Number(prompt("Enter the length of your password between 8 and 128?"));
-    if (plength == plength > 8 || plength < 128); { 
+    if (plength > 8 || plength < 128); { 
             characterNumber = plength;  
         }
     }
